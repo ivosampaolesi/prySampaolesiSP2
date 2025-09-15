@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             gpbTipo = new GroupBox();
-            lblTipo = new Label();
-            lblPersonas = new Label();
-            lblDias = new Label();
-            cmbTipo = new ComboBox();
-            cmbPersonas = new ComboBox();
             txtDias = new TextBox();
+            cmbPersonas = new ComboBox();
+            cmbTipo = new ComboBox();
+            lblDias = new Label();
+            lblPersonas = new Label();
+            lblTipo = new Label();
             gpbAdicionales = new GroupBox();
-            chkCocina = new CheckBox();
-            chkHeladera = new CheckBox();
             chkTelevisor = new CheckBox();
+            chkHeladera = new CheckBox();
+            chkCocina = new CheckBox();
             gpbFormasPago = new GroupBox();
-            optEfectivo = new RadioButton();
-            optTarjeta = new RadioButton();
-            cmbTarjetas = new ComboBox();
             lblTarjetas = new Label();
+            cmbTarjetas = new ComboBox();
+            optTarjeta = new RadioButton();
+            optEfectivo = new RadioButton();
             gpbTitular = new GroupBox();
-            lblNombre = new Label();
-            lblTelefonos = new Label();
-            txtNombre = new TextBox();
             txtTelefonos = new TextBox();
+            txtNombre = new TextBox();
+            lblTelefonos = new Label();
+            lblNombre = new Label();
             btnAceptar = new Button();
             gpbTipo.SuspendLayout();
             gpbAdicionales.SuspendLayout();
@@ -70,25 +70,31 @@
             gpbTipo.TabIndex = 0;
             gpbTipo.TabStop = false;
             gpbTipo.Text = "Tipo de cabañas";
-            gpbTipo.Enter += groupBox1_Enter;
             // 
-            // lblTipo
+            // txtDias
             // 
-            lblTipo.AutoSize = true;
-            lblTipo.Location = new Point(39, 30);
-            lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(39, 20);
-            lblTipo.TabIndex = 0;
-            lblTipo.Text = "Tipo";
+            txtDias.Location = new Point(537, 30);
+            txtDias.Name = "txtDias";
+            txtDias.Size = new Size(88, 27);
+            txtDias.TabIndex = 5;
+            txtDias.TextChanged += txtDias_TextChanged;
             // 
-            // lblPersonas
+            // cmbPersonas
             // 
-            lblPersonas.AutoSize = true;
-            lblPersonas.Location = new Point(271, 33);
-            lblPersonas.Name = "lblPersonas";
-            lblPersonas.Size = new Size(66, 20);
-            lblPersonas.TabIndex = 1;
-            lblPersonas.Text = "Personas";
+            cmbPersonas.FormattingEnabled = true;
+            cmbPersonas.Location = new Point(343, 30);
+            cmbPersonas.Name = "cmbPersonas";
+            cmbPersonas.Size = new Size(88, 28);
+            cmbPersonas.TabIndex = 4;
+            // 
+            // cmbTipo
+            // 
+            cmbTipo.FormattingEnabled = true;
+            cmbTipo.Location = new Point(84, 30);
+            cmbTipo.Name = "cmbTipo";
+            cmbTipo.Size = new Size(130, 28);
+            cmbTipo.TabIndex = 3;
+            cmbTipo.SelectedIndexChanged += cmbTipo_SelectedIndexChanged;
             // 
             // lblDias
             // 
@@ -99,28 +105,23 @@
             lblDias.TabIndex = 2;
             lblDias.Text = "Días";
             // 
-            // cmbTipo
+            // lblPersonas
             // 
-            cmbTipo.FormattingEnabled = true;
-            cmbTipo.Location = new Point(84, 30);
-            cmbTipo.Name = "cmbTipo";
-            cmbTipo.Size = new Size(130, 28);
-            cmbTipo.TabIndex = 3;
+            lblPersonas.AutoSize = true;
+            lblPersonas.Location = new Point(271, 33);
+            lblPersonas.Name = "lblPersonas";
+            lblPersonas.Size = new Size(66, 20);
+            lblPersonas.TabIndex = 1;
+            lblPersonas.Text = "Personas";
             // 
-            // cmbPersonas
+            // lblTipo
             // 
-            cmbPersonas.FormattingEnabled = true;
-            cmbPersonas.Location = new Point(343, 30);
-            cmbPersonas.Name = "cmbPersonas";
-            cmbPersonas.Size = new Size(88, 28);
-            cmbPersonas.TabIndex = 4;
-            // 
-            // txtDias
-            // 
-            txtDias.Location = new Point(537, 30);
-            txtDias.Name = "txtDias";
-            txtDias.Size = new Size(88, 27);
-            txtDias.TabIndex = 5;
+            lblTipo.AutoSize = true;
+            lblTipo.Location = new Point(39, 30);
+            lblTipo.Name = "lblTipo";
+            lblTipo.Size = new Size(39, 20);
+            lblTipo.TabIndex = 0;
+            lblTipo.Text = "Tipo";
             // 
             // gpbAdicionales
             // 
@@ -134,15 +135,15 @@
             gpbAdicionales.TabStop = false;
             gpbAdicionales.Text = "Adicionales";
             // 
-            // chkCocina
+            // chkTelevisor
             // 
-            chkCocina.AutoSize = true;
-            chkCocina.Location = new Point(18, 34);
-            chkCocina.Name = "chkCocina";
-            chkCocina.Size = new Size(76, 24);
-            chkCocina.TabIndex = 0;
-            chkCocina.Text = "Cocina";
-            chkCocina.UseVisualStyleBackColor = true;
+            chkTelevisor.AutoSize = true;
+            chkTelevisor.Location = new Point(18, 113);
+            chkTelevisor.Name = "chkTelevisor";
+            chkTelevisor.Size = new Size(89, 24);
+            chkTelevisor.TabIndex = 2;
+            chkTelevisor.Text = "Televisor";
+            chkTelevisor.UseVisualStyleBackColor = true;
             // 
             // chkHeladera
             // 
@@ -154,15 +155,15 @@
             chkHeladera.Text = "Heladera";
             chkHeladera.UseVisualStyleBackColor = true;
             // 
-            // chkTelevisor
+            // chkCocina
             // 
-            chkTelevisor.AutoSize = true;
-            chkTelevisor.Location = new Point(18, 113);
-            chkTelevisor.Name = "chkTelevisor";
-            chkTelevisor.Size = new Size(89, 24);
-            chkTelevisor.TabIndex = 2;
-            chkTelevisor.Text = "Televisor";
-            chkTelevisor.UseVisualStyleBackColor = true;
+            chkCocina.AutoSize = true;
+            chkCocina.Location = new Point(18, 34);
+            chkCocina.Name = "chkCocina";
+            chkCocina.Size = new Size(76, 24);
+            chkCocina.TabIndex = 0;
+            chkCocina.Text = "Cocina";
+            chkCocina.UseVisualStyleBackColor = true;
             // 
             // gpbFormasPago
             // 
@@ -177,16 +178,22 @@
             gpbFormasPago.TabStop = false;
             gpbFormasPago.Text = "Formas de Pago";
             // 
-            // optEfectivo
+            // lblTarjetas
             // 
-            optEfectivo.AutoSize = true;
-            optEfectivo.Location = new Point(47, 34);
-            optEfectivo.Name = "optEfectivo";
-            optEfectivo.Size = new Size(83, 24);
-            optEfectivo.TabIndex = 0;
-            optEfectivo.TabStop = true;
-            optEfectivo.Text = "Efectivo";
-            optEfectivo.UseVisualStyleBackColor = true;
+            lblTarjetas.AutoSize = true;
+            lblTarjetas.Location = new Point(220, 77);
+            lblTarjetas.Name = "lblTarjetas";
+            lblTarjetas.Size = new Size(59, 20);
+            lblTarjetas.TabIndex = 3;
+            lblTarjetas.Text = "Tarjetas";
+            // 
+            // cmbTarjetas
+            // 
+            cmbTarjetas.FormattingEnabled = true;
+            cmbTarjetas.Location = new Point(220, 100);
+            cmbTarjetas.Name = "cmbTarjetas";
+            cmbTarjetas.Size = new Size(235, 28);
+            cmbTarjetas.TabIndex = 2;
             // 
             // optTarjeta
             // 
@@ -198,23 +205,19 @@
             optTarjeta.TabStop = true;
             optTarjeta.Text = "Tarjetas";
             optTarjeta.UseVisualStyleBackColor = true;
+            optTarjeta.CheckedChanged += optTarjeta_CheckedChanged;
             // 
-            // cmbTarjetas
+            // optEfectivo
             // 
-            cmbTarjetas.FormattingEnabled = true;
-            cmbTarjetas.Location = new Point(220, 100);
-            cmbTarjetas.Name = "cmbTarjetas";
-            cmbTarjetas.Size = new Size(235, 28);
-            cmbTarjetas.TabIndex = 2;
-            // 
-            // lblTarjetas
-            // 
-            lblTarjetas.AutoSize = true;
-            lblTarjetas.Location = new Point(220, 77);
-            lblTarjetas.Name = "lblTarjetas";
-            lblTarjetas.Size = new Size(59, 20);
-            lblTarjetas.TabIndex = 3;
-            lblTarjetas.Text = "Tarjetas";
+            optEfectivo.AutoSize = true;
+            optEfectivo.Location = new Point(47, 34);
+            optEfectivo.Name = "optEfectivo";
+            optEfectivo.Size = new Size(83, 24);
+            optEfectivo.TabIndex = 0;
+            optEfectivo.TabStop = true;
+            optEfectivo.Text = "Efectivo";
+            optEfectivo.UseVisualStyleBackColor = true;
+            optEfectivo.CheckedChanged += optEfectivo_CheckedChanged;
             // 
             // gpbTitular
             // 
@@ -228,16 +231,22 @@
             gpbTitular.TabIndex = 3;
             gpbTitular.TabStop = false;
             gpbTitular.Text = "Titular de la Reserva";
-            gpbTitular.Enter += groupBox1_Enter_1;
             // 
-            // lblNombre
+            // txtTelefonos
             // 
-            lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(18, 36);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(64, 20);
-            lblNombre.TabIndex = 0;
-            lblNombre.Text = "Nombre";
+            txtTelefonos.Location = new Point(119, 86);
+            txtTelefonos.Name = "txtTelefonos";
+            txtTelefonos.Size = new Size(524, 27);
+            txtTelefonos.TabIndex = 3;
+            txtTelefonos.TextChanged += txtTelefonos_TextChanged;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(119, 33);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(524, 27);
+            txtNombre.TabIndex = 2;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // lblTelefonos
             // 
@@ -248,19 +257,14 @@
             lblTelefonos.TabIndex = 1;
             lblTelefonos.Text = "Telefonos";
             // 
-            // txtNombre
+            // lblNombre
             // 
-            txtNombre.Location = new Point(119, 33);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(524, 27);
-            txtNombre.TabIndex = 2;
-            // 
-            // txtTelefonos
-            // 
-            txtTelefonos.Location = new Point(119, 86);
-            txtTelefonos.Name = "txtTelefonos";
-            txtTelefonos.Size = new Size(524, 27);
-            txtTelefonos.TabIndex = 3;
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(18, 36);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(64, 20);
+            lblNombre.TabIndex = 0;
+            lblNombre.Text = "Nombre";
             // 
             // btnAceptar
             // 
@@ -270,6 +274,7 @@
             btnAceptar.TabIndex = 4;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // frmReserva
             // 
@@ -282,7 +287,9 @@
             Controls.Add(gpbAdicionales);
             Controls.Add(gpbTipo);
             Name = "frmReserva";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Reserva de Cabañas";
+            Load += frmReserva_Load;
             gpbTipo.ResumeLayout(false);
             gpbTipo.PerformLayout();
             gpbAdicionales.ResumeLayout(false);
